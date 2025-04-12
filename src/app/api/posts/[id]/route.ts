@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyToken, getPostById, updatePost, deletePost } from '@/lib/db';
 
+// Correct format for App Router API routes
 export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }

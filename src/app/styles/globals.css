@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme variables */
+  --background-light: #ffffff;
+  --background-main: #f8f5f0;
+  --text-main: #333333;
+  --text-dark: #1a1a2e;
+  --primary-light: #a3c5e0;
+  --primary-main: #7d9b5f;
+  --primary-dark: #4a5d47;
+  --secondary-light: #f1dbb6;
+  --secondary-main: #e3bba1;
+  --secondary-dark: #c49a7c;
+  --accent-light: #f0a3b0;
+  --accent-main: #d88c9a;
+  --accent-dark: #b06a78;
+  --card-background: var(--background-main);
+  --border-color: #e0e0e0;
+}
+
+.dark {
+  /* Dark theme variables */
+  --background-light: #1a1a2e;
+  --background-main: #2a2a3c;
+  --text-main: #f8f5f0;
+  --text-dark: #ffffff;
+  --primary-light: #a3c5e0;
+  --primary-main: #7d9b5f;
+  --primary-dark: #4a5d47;
+  --secondary-light: #f1dbb6;
+  --secondary-main: #e3bba1;
+  --secondary-dark: #c49a7c;
+  --accent-light: #f0a3b0;
+  --accent-main: #d88c9a;
+  --accent-dark: #b06a78;
+  --card-background: #2a2a3c;
+  --border-color: #3a3a4c;
+}
+
+body {
+  background-color: var(--background-main);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ghibli-inspired styling */
+.ghibli-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.ghibli-header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.ghibli-card {
+  background-color: var(--card-background);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.ghibli-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.ghibli-button {
+  background-color: var(--primary-main);
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ghibli-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.ghibli-button-secondary {
+  background-color: var(--secondary-main);
+  color: var(--text-dark);
+}
+
+.ghibli-button-secondary:hover {
+  background-color: var(--secondary-dark);
+}
+
+.ghibli-button-accent {
+  background-color: var(--accent-main);
+  color: white;
+}
+
+.ghibli-button-accent:hover {
+  background-color: var(--accent-dark);
+}
+
+/* Ghibli-inspired decorative elements */
+.ghibli-cloud {
+  position: absolute;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.ghibli-cloud-1 {
+  top: 10%;
+  left: 5%;
+  width: 150px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+}
+
+.ghibli-cloud-2 {
+  top: 15%;
+  right: 10%;
+  width: 100px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 40px;
+}
+
+/* Ghibli-inspired input fields */
+.ghibli-input {
+  background-color: var(--background-light);
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ghibli-input:focus {
+  outline: none;
+  border-color: var(--primary-main);
+  box-shadow: 0 0 0 3px rgba(125, 155, 95, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ghibli-container {
+    padding: 1rem;
+  }
+}
